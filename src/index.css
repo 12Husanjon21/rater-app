@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #141519;
+  place-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100vh;
+  color: white;
+  font-family: "Overpass", sans-serif;
+}
+
+main {
+  min-width: 375px;
+}
+
+@media screen and (max-width: 380px) {
+  .response {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .response {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
