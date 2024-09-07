@@ -9,10 +9,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  font-family: "Inter", sans-serif;
-}
-
 body {
   display: flex;
   background-color: #141519;
@@ -41,3 +37,4 @@ main {
     margin-left: 5px;
   }
 }
+

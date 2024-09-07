@@ -1,17 +1,30 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
-export default function RatingBtns({ setIsSubmitted, setRating }) {
+export default function RatingBtns({ setIsSubmitted, setRating, rating }) {
   const [selected, setSelected] = useState(null);
 
   const handleClick = (button) => {
-    setSelected(button);
+    setSelected(button); // Ratingni saqlash
   };
 
   const handleSubmitClick = () => {
     if (selected) {
       setRating(selected); // Tanlangan ratingni saqlaymiz
       setIsSubmitted(true); // Submit holatini true ga o'zgartiramiz
+
+      // SweetAlert ni chiqaramiz
+      Swal.fire({
+        toast: true,
+        position: "top-end", // Yuqori chap burchakka joylashtirish
+        icon: "success",
+        title: `You're rated successfully`,
+        showConfirmButton: false, // OK tugmasi yo'q
+        timer: 2500, // 2.5 soniya ko'rinadi
+        timerProgressBar: true, // Progress bar ko'rinadi
+        background: "#1e252f", // Alert fon rangi
+        color: "white", // Matn rangi
+      });
     } else {
       Swal.fire({
         icon: "warning",
